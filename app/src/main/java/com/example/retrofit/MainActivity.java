@@ -49,10 +49,10 @@ public class MainActivity extends AppCompatActivity {
 
         jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
 
-        // getPost();
+        getPost();
         //getComments();
         //createPost();
-        putUpdatePost();
+       // putUpdatePost();
         //patchUpdatePost();
         //deletePost();
     }
@@ -63,9 +63,9 @@ public class MainActivity extends AppCompatActivity {
         parameters.put("_sort", "id");
         parameters.put("_order", "desc");
 
-        // Call<List<Post>> call = jsonPlaceHolderApi.getPosts(4, "id", "desc");
+        Call<List<Post>> call = jsonPlaceHolderApi.getPosts(4, "id", "desc");
         // Call<List<Post>> call = jsonPlaceHolderApi.getPosts(2,4, "id", "desc");
-        Call<List<Post>> call = jsonPlaceHolderApi.getPosts(new Integer[]{2, 3, 4}, "id", "desc");
+       // Call<List<Post>> call = jsonPlaceHolderApi.getPosts(new Integer[]{2, 3, 4}, "id", "desc");
         //Call<List<Post>> call = jsonPlaceHolderApi.getPosts(parameters);
 
         //Asynchronously send the request and notify callback of its response or
