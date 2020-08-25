@@ -43,7 +43,7 @@ public interface JsonPlaceHolderApi {
             @Query("_sort") String sort,
             @Query("_order") String order);
 
-    @GET("posts")
+    @GET("posts") //parameter can be based in key and value pair and send pass as much parameter as we want.
     Call<List<Post>> getPosts(@QueryMap Map<String, String> parameter);
 
 
